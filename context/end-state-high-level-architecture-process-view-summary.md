@@ -1,23 +1,18 @@
 # End State High Level Architecture (Process View)
 
 ## Purpose
-Describe the target process and application landscape for the end-state architecture.
-
-## Business Processes
-- 
-- 
-- 
+Target process and application landscape for end-state SAP architecture.
 
 ## Core Systems
-- S/4HANA
-- MDG
-- Ariba
-- Adobe Commerce
-- [add others from your slide]
+- S/4HANA (core ERP)
+- MDG (master data governance)
+- Ariba (procurement)
+- Adobe Commerce (frontend)
 
 ## Key Integrations
-- [System A] → [System B] : [What flows]
-- [System A] → [System B] : [What flows]
+- Adobe Commerce → S/4HANA : Customer orders
+- Ariba → MDG : Supplier data
+- MDG → S/4HANA : Master data distribution
 
 ## Data Domains
 - Customer
@@ -29,42 +24,28 @@ Describe the target process and application landscape for the end-state architec
 - Inventory
 
 ## Architecture Pattern
-- [e.g. API-led, event-driven, middleware layer, etc.]
+- Likely point-to-point integrations
+- No clearly defined central integration layer
 
 ## Key Observations
-- 
-- 
-- 
+- Multiple integration paths across systems
+- No standardised integration architecture
+- Data ownership unclear across domains
 
 ## Risks / Gaps
-- 
-- 
-- 
+- Duplicate data flows across systems
+- Lack of governance and ownership
+- Potential inconsistency in master data
 
 ## KDD Relevance
-- Which KDDs are impacted:
-- Missing KDD areas:
-- Ownership gaps:
+- Impacted areas: Master Data, Integration, Process Ownership
+- Missing KDDs: Integration standards, data ownership model
+- Ownership gaps: unclear accountability across domains
 
 ## Notes for Leadership (VP Level)
-- ## Core Systems
-- S/4HANA (core ERP)
-- MDG (master data)
-- Ariba (procurement)
-- Adobe Commerce (frontend)
+- Current architecture shows fragmentation and lack of standardisation
+- Risk of data inconsistency and duplication across regions
+- Requires central integration strategy and governance model
 
-## Key Integrations
-- Adobe Commerce → S/4HANA : Customer orders
-- Ariba → MDG : Supplier data
-- MDG → S/4HANA : Master data distribution
 
-## Key Observations
-- Multiple integration paths
-- No clear central integration layer
-- Data ownership unclear
-
-## Risks / Gaps
-- Duplicate data flows
-- Lack of governance
-- 
 - 
